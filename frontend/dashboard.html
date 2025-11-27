@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FileUploader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-cloud-upload-alt"></i>
+                FileUploader
+            </div>
+            <div class="nav-links">
+                <span id="userWelcome">Welcome, User</span>
+                <button class="btn-logout" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <a href="#upload" class="menu-item active" data-tab="upload">
+                    <i class="fas fa-upload"></i>
+                    Upload Files
+                </a>
+                <a href="#files" class="menu-item" data-tab="files">
+                    <i class="fas fa-files"></i>
+                    My Files
+                </a>
+                <a href="#profile" class="menu-item" data-tab="profile">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <!-- Upload Tab -->
+            <div id="upload" class="tab-content active">
+                <div class="upload-section">
+                    <h2>Upload Files</h2>
+                    <p>Drag and drop files here or click to browse</p>
+                    
+                    <div class="upload-area" id="uploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Drop files here</h3>
+                        <p>Maximum file size: 50MB</p>
+                        <input type="file" id="fileInput" multiple style="display: none;">
+                        <button class="btn-primary" onclick="document.getElementById('fileInput').click()">
+                            Select Files
+                        </button>
+                    </div>
+
+                    <div id="uploadProgress" class="progress-container hidden">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span id="progressText">0%</span>
+                    </div>
+
+                    <div id="uploadedFiles" class="uploaded-files"></div>
+                </div>
+            </div>
+
+            <!-- Files Tab -->
+            <div id="files" class="tab-content">
+                <div class="files-section">
+                    <h2>My Files</h2>
+                    <div class="files-grid" id="filesGrid">
+                        <!-- Files will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Tab -->
+            <div id="profile" class="tab-content">
+                <div class="profile-section">
+                    <h2>Profile Settings</h2>
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <i class="fas fa-user-circle"></i>
+                            <h3 id="profileName">User Name</h3>
+                        </div>
+                        <div class="profile-info">
+                            <div class="info-item">
+                                <label>Email:</label>
+                                <span id="profileEmail">user@example.com</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Member since:</label>
+                                <span id="profileSince">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

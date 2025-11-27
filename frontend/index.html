@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileUploader - Modern File Sharing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-cloud-upload-alt"></i>
+                FileUploader
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <button class="btn-login" onclick="location.href='login.html'">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Secure File Uploads Made Simple</h1>
+                <p>Upload, share, and manage your files with our modern, secure platform. Built for speed and reliability.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="location.href='login.html'">
+                        Get Started
+                    </button>
+                    <button class="btn-secondary" onclick="location.href='#features'">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="upload-card-preview">
+                    <i class="fas fa-file-upload"></i>
+                    <p>Drag & Drop Files Here</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose FileUploader?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Uploads</h3>
+                    <p>Military-grade encryption and secure authentication for your files.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Lightning Fast</h3>
+                    <p>Optimized upload speeds with modern compression technology.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Responsive Design</h3>
+                    <p>Works perfectly on all devices - desktop, tablet, and mobile.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-infinity"></i>
+                    <h3>Unlimited Storage</h3>
+                    <p>Store as many files as you need with our scalable infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FileUploader. Built with ❤️ using Node.js & Railway.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
