@@ -1,0 +1,34 @@
+// Place this file in your repository's root directory and name it "railpack.json"
+{
+  "$schema": "https://schema.railpack.com",
+  "steps": {
+    "setup": {
+      "inputs": [
+        {
+          "image": "node:22"
+        }
+      ],
+      "commands": [
+        "cd backend",
+        "npm install"
+      ]
+    },
+    "build": {
+      "inputs": [
+        {
+          "step": "setup"
+        }
+      ],
+      "commands": [
+        "cd backend",
+        "npm run build"
+      ]
+    }
+  },
+  "deploy": {
+    "base": {
+      "step": "build"
+    },
+    "startCommand": "cd backend && npm start"
+  }
+}
